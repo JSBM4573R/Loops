@@ -1,6 +1,10 @@
+import java.util.Scanner;
+
 public class Loops {
 
     public static void main (String[] args) {
+
+        Scanner sc = new Scanner(System.in);
 
         System.out.println(" ----------------------------------- Ciclo For ----------------------------------------- ");
 
@@ -47,10 +51,24 @@ public class Loops {
         System.out.println(" ------------------------------------- Ciclo While ------------------------------------- ");
 
         /*While permite ejecutar un ciclo mientras su condicion entre sus parentesis sea igual a true.*/
+
         int contador = 0;
         while (contador <= 10) { //mientras que (condicion)
             //Ejecuta el scope
             System.out.println(contador++);
         }
+
+        System.out.println(" ------------------------------------ Ciclo Do While ----------------------------------- ");
+
+        /*Do While hace algo mientras la condicion se cumpla. Lo que esta dentro del scope del do se repetira hasta que la
+        la condicion del While se mantenga.*/
+
+        int claveIngresada, claveGuardada = 123;
+        do {
+            System.out.println("introduce una clave númerica: ");
+            claveIngresada = sc.nextInt();
+        } while (claveIngresada != claveGuardada);
+        System.out.println("Clave correcta");
+
     }
 }
